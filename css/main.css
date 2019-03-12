@@ -1929,7 +1929,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #8262d2;
+  background: #2aff9a;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3010,4 +3010,10 @@ hr {
     width: auto;
     text-align: center;
   }
+}
+body {
+  background-image: url("/images/background.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
