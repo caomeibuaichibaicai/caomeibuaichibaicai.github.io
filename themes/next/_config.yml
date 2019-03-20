@@ -821,3 +821,9 @@ passage_end_tag:
 # 点击爆炸效果的实现
 # Fireworks
 fireworks: true
+
+
+#Daovoice在线聊天
+# Online contact 
+daovoice: true
+daovoice_app_id: 2a735002
