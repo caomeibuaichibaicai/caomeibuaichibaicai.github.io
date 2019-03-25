@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-22T03:23:01.106Z</updated>
+  <updated>2019-03-25T10:46:28.205Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/03/07/firstArtical/"/>
     <id>http://yoursite.com/2019/03/07/firstArtical/</id>
     <published>2019-03-07T08:01:07.000Z</published>
-    <updated>2019-03-22T03:23:01.106Z</updated>
+    <updated>2019-03-25T10:46:28.205Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,7 @@
       
         
         
-          &lt;h2 id=&quot;这是我第二次来hexo的-第一天&quot;&gt;&lt;a href=&quot;#这是我第二次来hexo的-第一天&quot; class=&quot;headerlink&quot; title=&quot;这是我第二次来hexo的 == 第一天 ==&quot;&gt;&lt;/a&gt;这是我第二次来hexo的 == 第一天
+          &lt;p&gt;##这是我第二次来hexo的第一天&lt;br&gt;第二次见面了，hexo老朋友，17年的时候第一次使用基于node的静态资源博客
         
       
     
