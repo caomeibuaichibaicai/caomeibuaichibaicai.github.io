@@ -2041,7 +2041,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4dad21;
+  background: #b0f68f;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3124,7 +3124,7 @@ hr {
   }
 }
 body {
-  background-image: url("/images/sdfdg.jpg");
+  background-image: url("/images/background1.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 100% 100%;
