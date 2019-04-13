@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[blogOne]]></title>
+    <title><![CDATA[Js浮点数]]></title>
     <url>%2F2019%2F03%2F26%2FblogOne%2F</url>
-    <content type="text"><![CDATA[只晓得发电视剧]]></content>
+    <content type="text"><![CDATA[Js浮点数小计 浮点数出现的原因js在进行计算时，需要将数字先转化为二进制，然后进行加减乘除的计算，得到的结果仍然是二进制，最后再转化为十进制，从而得到结果，在这个过程中就产生了 ==浮点数==，在小数位产生了误差。 js的计算 精度准确 的最大值是2^53^-1若大于这个值就会出现精度丢失的情况，在2^53^至2^54^的范围内，只能计算出==偶数==；在2^54^至2^55^的范围内，只能四个数选一个，即==四的倍数==，后面以此类推，精度越来越小 js能 表示的最大整数是2^1024^-1]]></content>
       <categories>
-        <category>trytry</category>
+        <category>Js基础</category>
       </categories>
       <tags>
-        <tag>first标签</tag>
+        <tag>浮点数</tag>
       </tags>
   </entry>
   <entry>

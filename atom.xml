@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-26T08:53:19.576Z</updated>
+  <updated>2019-04-13T07:49:15.334Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>blogOne</title>
+    <title>Js浮点数</title>
     <link href="http://yoursite.com/2019/03/26/blogOne/"/>
     <id>http://yoursite.com/2019/03/26/blogOne/</id>
     <published>2019-03-26T03:23:04.000Z</published>
-    <updated>2019-03-26T08:53:19.576Z</updated>
+    <updated>2019-04-13T07:49:15.334Z</updated>
     
     <summary type="html">
     
@@ -29,16 +29,16 @@
       
         
         
-          &lt;h1 id=&quot;只晓得发电视剧&quot;&gt;&lt;a href=&quot;#只晓得发电视剧&quot; class=&quot;headerlink&quot;
+          &lt;h2 id=&quot;Js浮点数小计&quot;&gt;&lt;a href=&quot;#Js浮点数小计&quot; class=&quot;headerlink&quot;
         
       
     
     </summary>
     
-      <category term="trytry" scheme="http://yoursite.com/categories/trytry/"/>
+      <category term="Js基础" scheme="http://yoursite.com/categories/Js%E5%9F%BA%E7%A1%80/"/>
     
     
-      <category term="first标签" scheme="http://yoursite.com/tags/first%E6%A0%87%E7%AD%BE/"/>
+      <category term="浮点数" scheme="http://yoursite.com/tags/%E6%B5%AE%E7%82%B9%E6%95%B0/"/>
     
   </entry>
   
