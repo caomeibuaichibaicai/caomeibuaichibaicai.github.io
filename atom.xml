@@ -120,10 +120,10 @@
   
   <entry>
     <title>error处理语法</title>
-    <link href="http://yoursite.com/2017/04/11/err-catch/"/>
-    <id>http://yoursite.com/2017/04/11/err-catch/</id>
-    <published>2017-04-11T02:13:15.000Z</published>
-    <updated>2019-04-16T08:18:41.368Z</updated>
+    <link href="http://yoursite.com/2016/12/11/err-catch/"/>
+    <id>http://yoursite.com/2016/12/11/err-catch/</id>
+    <published>2016-12-11T02:13:15.000Z</published>
+    <updated>2019-04-16T08:20:38.394Z</updated>
     
     <summary type="html">
     
@@ -131,7 +131,7 @@
       
         
         
-          &lt;p&gt;###1.try-catch语法解释用法&lt;br&gt;try是定义用来测试代码块出现错误的语句，&lt;strong&gt;必须和catch或者finally连用，也可以三个都一起用&lt;/strong&gt;。&lt;br&gt;catch只有当发生错误时才会执行，finally无论有无异常都会执行。&lt;br&gt;
+          &lt;h3 id=&quot;1-try-catch语法解释用法&quot;&gt;&lt;a href=&quot;#1-try-catch语法解释用法&quot; class=&quot;headerlink&quot;
         
       
     
