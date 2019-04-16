@@ -49,6 +49,32 @@
   </entry>
   
   <entry>
+    <title>vuex笔记</title>
+    <link href="http://yoursite.com/2018/04/16/vuex%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2018/04/16/vuex笔记/</id>
+    <published>2018-04-16T10:41:15.000Z</published>
+    <updated>2019-04-16T10:59:04.918Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-通过在根组件，设置store选项，将状态从根组件注入到下面所有的子组件中&quot;&gt;&lt;a href=&quot;#1-通过在根组件，设置store选项，将状态从根组件注入到下面所有的子组件中&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
+    
+    
+      <category term="vuex" scheme="http://yoursite.com/tags/vuex/"/>
+    
+  </entry>
+  
+  <entry>
     <title>es6_解构赋值</title>
     <link href="http://yoursite.com/2018/01/02/es6-%E8%A7%A3%E6%9E%84/"/>
     <id>http://yoursite.com/2018/01/02/es6-解构/</id>
