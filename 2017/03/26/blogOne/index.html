@@ -95,7 +95,7 @@
 
 
 
-  <meta name="keywords" content="es6_proto,原型新方法,">
+  <meta name="keywords" content="浮点数,">
 
 
 
@@ -108,18 +108,18 @@
 
 
 
-<meta name="description" content="1.Object.setPrototypeOf()作用与proto相同，用来设置一个对象的prototype对象，返回参数对象本身。用来设置对象的原型对象，使原型对象的属性可以从对象上读取出来，并返回第一个参数obj  用法：  Object.setPrototypeOf(obj,proto),    其中obj是对象，proto是原型对象，将proto对象设为obj对象的原型。若第一个参数不是对">
-<meta name="keywords" content="es6_proto,原型新方法">
+<meta name="description" content="Js浮点数小计 浮点数出现的原因js在进行计算时，需要将数字先转化为二进制，然后进行加减乘除的计算，得到的结果仍然是二进制，最后再转化为十进制，从而得到结果，在这个过程中就产生了 ==浮点数==，在小数位产生了误差。 js的计算 精度准确 的最大值是2^53^-1最小值为其对应的负数-2^53^-1若大于这个值就会出现精度丢失的情况，在2^53^至2^54^的范围内，只能计算出==偶数==；在2">
+<meta name="keywords" content="浮点数">
 <meta property="og:type" content="article">
-<meta property="og:title" content="es6_proto新方法">
-<meta property="og:url" content="http://yoursite.com/2019/04/16/es6-proto/index.html">
+<meta property="og:title" content="Js浮点数">
+<meta property="og:url" content="http://yoursite.com/2017/03/26/blogOne/index.html">
 <meta property="og:site_name" content="Strawberry 💕">
-<meta property="og:description" content="1.Object.setPrototypeOf()作用与proto相同，用来设置一个对象的prototype对象，返回参数对象本身。用来设置对象的原型对象，使原型对象的属性可以从对象上读取出来，并返回第一个参数obj  用法：  Object.setPrototypeOf(obj,proto),    其中obj是对象，proto是原型对象，将proto对象设为obj对象的原型。若第一个参数不是对">
+<meta property="og:description" content="Js浮点数小计 浮点数出现的原因js在进行计算时，需要将数字先转化为二进制，然后进行加减乘除的计算，得到的结果仍然是二进制，最后再转化为十进制，从而得到结果，在这个过程中就产生了 ==浮点数==，在小数位产生了误差。 js的计算 精度准确 的最大值是2^53^-1最小值为其对应的负数-2^53^-1若大于这个值就会出现精度丢失的情况，在2^53^至2^54^的范围内，只能计算出==偶数==；在2">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-16T08:00:11.867Z">
+<meta property="og:updated_time" content="2019-04-16T08:26:31.002Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="es6_proto新方法">
-<meta name="twitter:description" content="1.Object.setPrototypeOf()作用与proto相同，用来设置一个对象的prototype对象，返回参数对象本身。用来设置对象的原型对象，使原型对象的属性可以从对象上读取出来，并返回第一个参数obj  用法：  Object.setPrototypeOf(obj,proto),    其中obj是对象，proto是原型对象，将proto对象设为obj对象的原型。若第一个参数不是对">
+<meta name="twitter:title" content="Js浮点数">
+<meta name="twitter:description" content="Js浮点数小计 浮点数出现的原因js在进行计算时，需要将数字先转化为二进制，然后进行加减乘除的计算，得到的结果仍然是二进制，最后再转化为十进制，从而得到结果，在这个过程中就产生了 ==浮点数==，在小数位产生了误差。 js的计算 精度准确 的最大值是2^53^-1最小值为其对应的负数-2^53^-1若大于这个值就会出现精度丢失的情况，在2^53^至2^54^的范围内，只能计算出==偶数==；在2">
 
 
 
@@ -149,13 +149,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/04/16/es6-proto/">
+  <link rel="canonical" href="http://yoursite.com/2017/03/26/blogOne/">
 
 
 
 
 
-  <title>es6_proto新方法 | Strawberry 💕</title>
+  <title>Js浮点数 | Strawberry 💕</title>
   
 
 
@@ -316,7 +316,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/16/es6-proto/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/26/blogOne/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Strawberry">
@@ -333,7 +333,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">es6_proto新方法</h1>
+          <h1 class="post-title" itemprop="name headline">Js浮点数</h1>
         
 
         <div class="post-meta">
@@ -345,8 +345,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-16T15:44:52+08:00">
-                2019-04-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-26T11:23:04+08:00">
+                2017-03-26
               </time>
             
 
@@ -410,16 +410,27 @@
       
 
       
-        <h2 id="1-Object-setPrototypeOf"><a href="#1-Object-setPrototypeOf" class="headerlink" title="1.Object.setPrototypeOf()"></a>1.Object.setPrototypeOf()</h2><p>作用与<strong>proto</strong>相同，用来设置一个对象的prototype对象，返回参数对象本身。用来设置对象的原型对象，使原型对象的属性可以从对象上读取出来，并返回第一个参数obj</p>
-<blockquote>
-<p>用法：</p>
-</blockquote>
-<p>Object.setPrototypeOf(obj,proto),    其中obj是对象，proto是原型对象，将proto对象设为obj对象的原型。<br>若第一个参数不是对象，那么会自动转化为对象，但是最后还是返回的第一个参数，不会改变数据类型。但在这个过程中obj不能为undefined或者null，因为它们不能转化为对象，所以此时会报错。</p>
-<h2 id="2-Object-getPrototypeOf"><a href="#2-Object-getPrototypeOf" class="headerlink" title="2.Object.getPrototypeOf()"></a>2.Object.getPrototypeOf()</h2><p>用来读取一个对象的原型对象，例子如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Rectangle</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//创建一个构造函数</span></span><br><span class="line"><span class="keyword">const</span> rec = <span class="keyword">new</span> Rectangle();</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.getPrototypeOf(rec) === Rectangle.prototype===rec._proto_</span><br></pre></td></tr></table></figure></p>
-<p>同样会将obj转化为对象，机制同上。</p>
+        <h2 id="Js浮点数小计"><a href="#Js浮点数小计" class="headerlink" title="Js浮点数小计"></a>Js浮点数小计</h2><ol>
+<li>浮点数出现的<strong>原因</strong><br>js在进行计算时，需要将数字先转化为二进制，然后进行加减乘除的计算，得到的结果仍然是二进制，最后再转化为十进制，从而得到结果，在这个过程中就产生了 ==浮点数==，在小数位产生了误差。</li>
+<li>js的计算 <strong>精度准确</strong> 的最大值是2^53^-1<br>最小值为其对应的<strong>负数</strong>-2^53^-1<br>若大于这个值就会出现精度丢失的情况，在2^53^至2^54^的范围内，只能计算出==偶数==；在2^54^至2^55^的范围内，只能四个数选一个，即==四的倍数==，后面以此类推，精度越来越小</li>
+<li>js能 <strong>表示的</strong> 最大整数是2^1024^-1<br>从2^1024^往后，后面的数字都只能被表示为Infinity</li>
+<li>解决js浮点数中的加减乘除运算<strong>误差</strong>问题</li>
+</ol>
+<ul>
+<li>==单纯展示数据方法:==<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">strip</span>(<span class="params">num, precision = <span class="number">12</span></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> +<span class="built_in">parseFloat</span>(num.toPrecision(precision));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>先使用toPrecision对数字进行浮点数的处理，这个函数对超过指定精度的部分，进行一个凑整处理。(<em>精度部分从最左边第一个不为0的位数开始计算</em>)，通过经验计算，这个精度一般会选择12位。（当然也可以更高）<br>之后会返回一个String类型的数字字符串，使用parseFloat对字符串进行转化为数字。</p>
+<ul>
+<li>==浮点进行运算方法：==<br>这个时候的思路是把小数转化为整数，然后在进行运算.<br>乘*：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Mul = <span class="function">(<span class="params">num1, num2</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> m = <span class="number">0</span></span><br><span class="line">  <span class="keyword">const</span> s1 = <span class="string">`<span class="subst">$&#123;num1&#125;</span>`</span></span><br><span class="line">  <span class="keyword">const</span> s2 = <span class="string">`<span class="subst">$&#123;num2&#125;</span>`</span></span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">// m += s1.split('.')[1].length</span></span><br><span class="line">    m += <span class="keyword">get</span>(s1.split('.'), '[1].length', 0)</span><br><span class="line">  &#125; catch (e) &#123;</span><br><span class="line">    <span class="built_in">console</span>.error(e)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">// m += s2.split('.')[1].length</span></span><br><span class="line">    m += <span class="keyword">get</span>(s2.split('.'), '[1].length', 0)</span><br><span class="line">  &#125; catch (e) &#123;</span><br><span class="line">    <span class="built_in">console</span>.error(e)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Number</span>(s1.replace(<span class="string">'.'</span>, <span class="string">''</span>)) *</span><br><span class="line">    <span class="built_in">Number</span>(s2.replace(<span class="string">'.'</span>, <span class="string">''</span>)) /</span><br><span class="line">    <span class="built_in">Math</span>.pow(<span class="number">10</span>, m)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>除/:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 两个浮点数相除</span></span><br><span class="line"><span class="keyword">const</span> Div = <span class="function">(<span class="params">num1, num2</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> t1</span><br><span class="line">  <span class="keyword">let</span> t2</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">// t1 = `$&#123;num1&#125;`.split('.')[1].length</span></span><br><span class="line">    t1 = <span class="keyword">get</span>(`$&#123;num1&#125;<span class="string">`.split('.'), '[1].length', 0)</span></span><br><span class="line"><span class="string">  &#125; catch (e) &#123;</span></span><br><span class="line"><span class="string">    t1 = 0</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  try &#123;</span></span><br><span class="line"><span class="string">    // t2 = `</span>$&#123;num2&#125;<span class="string">`.toString().split('.')[1].length</span></span><br><span class="line"><span class="string">    t2 = get(`</span>$&#123;num2&#125;<span class="string">`.toString().split('.'), '[1].length', 0)</span></span><br><span class="line"><span class="string">  &#125; catch (e) &#123;</span></span><br><span class="line"><span class="string">    t2 = 0</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  const r1 = Number(`</span>$&#123;num1&#125;<span class="string">`.replace('.', ''))</span></span><br><span class="line"><span class="string">  const r2 = Number(`</span>$&#123;num2&#125;<span class="string">`.toString().replace('.', ''))</span></span><br><span class="line"><span class="string">  return (r1 / r2) * Math.pow(10, t2 - t1)</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>加+：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 两个浮点数相加</span></span><br><span class="line"><span class="keyword">const</span> Add = <span class="function">(<span class="params">num1, num2</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> r1</span><br><span class="line">  <span class="keyword">let</span> r2</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    r1 = <span class="string">`<span class="subst">$&#123;num1&#125;</span>`</span>.split(<span class="string">'.'</span>)[<span class="number">1</span>].length</span><br><span class="line">  &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">    r1 = <span class="number">0</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    r2 = <span class="string">`<span class="subst">$&#123;num2&#125;</span>`</span>.split(<span class="string">'.'</span>)[<span class="number">1</span>].length</span><br><span class="line">  &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">    r2 = <span class="number">0</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> m = <span class="built_in">Math</span>.pow(<span class="number">10</span>, <span class="built_in">Math</span>.max(r1, r2))</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.round(num1 * m + num2 * m) / m</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>减-：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 两个浮点数相减</span></span><br><span class="line"><span class="keyword">const</span> Sub = <span class="function">(<span class="params">num1, num2</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> r1</span><br><span class="line">  <span class="keyword">let</span> r2</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    r1 = <span class="string">`<span class="subst">$&#123;num1&#125;</span>`</span>.split(<span class="string">'.'</span>)[<span class="number">1</span>].length</span><br><span class="line">  &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">    r1 = <span class="number">0</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    r2 = <span class="string">`<span class="subst">$&#123;num2&#125;</span>`</span>.split(<span class="string">'.'</span>)[<span class="number">1</span>].length</span><br><span class="line">  &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">    r2 = <span class="number">0</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> m = <span class="built_in">Math</span>.pow(<span class="number">10</span>, <span class="built_in">Math</span>.max(r1, r2))</span><br><span class="line">  <span class="keyword">const</span> n = (r1 &gt;= r2) ? r1 : r2</span><br><span class="line">  <span class="keyword">return</span> toFixed((<span class="built_in">Math</span>.round(num1 * m - num2 * m) / m), n)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果觉得很麻烦的话，当然也有现成的插件来用啊~~~<br>比如：<a href="https://github.com/nefe/number-precision" target="_blank" rel="noopener">number-precision</a>，这个库的优点在于体积小，只有不到1K的大小。<br>还有我们熟知的<a href="https://mathjs.org/download.html" target="_blank" rel="noopener">math.js</a>,里面的方法较全，代码可维护性也较高。</p>
 <hr>
-<p>最后，给一个完整克隆一个对象的方法，包括拷贝对象原型的属性，有以下 <strong>三种方法：</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 写法一</span></span><br><span class="line"><span class="keyword">const</span> clone1 = &#123;</span><br><span class="line">  __proto__: <span class="built_in">Object</span>.getPrototypeOf(obj),</span><br><span class="line">  ...obj</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 写法二</span></span><br><span class="line"><span class="keyword">const</span> clone2 = <span class="built_in">Object</span>.assign(</span><br><span class="line">  <span class="built_in">Object</span>.create(<span class="built_in">Object</span>.getPrototypeOf(obj)),</span><br><span class="line">  obj</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 写法三</span></span><br><span class="line"><span class="keyword">const</span> clone3 = <span class="built_in">Object</span>.create(</span><br><span class="line">  <span class="built_in">Object</span>.getPrototypeOf(obj),</span><br><span class="line">  <span class="built_in">Object</span>.getOwnPropertyDescriptors(obj)</span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
-<p>写法二和写法三的通用性更强，推荐！写法一可能<strong>proto</strong>属性在非浏览器环境下，不一定会被部署~~~~</p>
+<p>今天对浮点数的小计差不多就到这里啦💗</p>
 
       
     </div>
@@ -470,9 +481,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/es6-proto/" rel="tag"><i class="fa fa-tag"></i> es6_proto</a>
-          
-            <a href="/tags/原型新方法/" rel="tag"><i class="fa fa-tag"></i> 原型新方法</a>
+            <a href="/tags/浮点数/" rel="tag"><i class="fa fa-tag"></i> 浮点数</a>
           
         </div>
       
@@ -485,8 +494,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/26/blogOne/" rel="next" title="Js浮点数">
-                <i class="fa fa-chevron-left"></i> Js浮点数
+              <a href="/2017/02/11/err-catch/" rel="next" title="error处理语法">
+                <i class="fa fa-chevron-left"></i> error处理语法
               </a>
             
           </div>
@@ -494,6 +503,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/16/es6-proto/" rel="prev" title="es6_proto新方法">
+                es6_proto新方法 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -661,7 +674,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Object-setPrototypeOf"><span class="nav-number">1.</span> <span class="nav-text">1.Object.setPrototypeOf()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Object-getPrototypeOf"><span class="nav-number">2.</span> <span class="nav-text">2.Object.getPrototypeOf()</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Js浮点数小计"><span class="nav-number">1.</span> <span class="nav-text">Js浮点数小计</span></a></li></ol></div>
             
 
           </div>
