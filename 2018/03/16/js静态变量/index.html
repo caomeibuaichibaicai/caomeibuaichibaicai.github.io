@@ -95,7 +95,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="静态变量,原型上实例方法,typescript,">
 
 
 
@@ -108,16 +108,18 @@
 
 
 
-<meta name="description" content="so say Geronimo !">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Strawberry 💕">
-<meta property="og:url" content="http://yoursite.com/archives/2017/12/index.html">
+<meta name="description" content="1.js中的静态方法是无法被实例对象所调用的例子如下：1234567var BaseClass = function() &amp;#123;&amp;#125;; // var BaseClass=new Function();  BaseClass.f1 = function()&amp;#123;//定义静态方法        alert(&apos; This is a static method &apos;);   &amp;#125;">
+<meta name="keywords" content="静态变量,原型上实例方法,typescript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js静态变量以及静态方法(内含ts小笔记)">
+<meta property="og:url" content="http://yoursite.com/2018/03/16/js静态变量/index.html">
 <meta property="og:site_name" content="Strawberry 💕">
-<meta property="og:description" content="so say Geronimo !">
+<meta property="og:description" content="1.js中的静态方法是无法被实例对象所调用的例子如下：1234567var BaseClass = function() &amp;#123;&amp;#125;; // var BaseClass=new Function();  BaseClass.f1 = function()&amp;#123;//定义静态方法        alert(&apos; This is a static method &apos;);   &amp;#125;">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-16T11:21:51.537Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Strawberry 💕">
-<meta name="twitter:description" content="so say Geronimo !">
+<meta name="twitter:title" content="js静态变量以及静态方法(内含ts小笔记)">
+<meta name="twitter:description" content="1.js中的静态方法是无法被实例对象所调用的例子如下：1234567var BaseClass = function() &amp;#123;&amp;#125;; // var BaseClass=new Function();  BaseClass.f1 = function()&amp;#123;//定义静态方法        alert(&apos; This is a static method &apos;);   &amp;#125;">
 
 
 
@@ -147,13 +149,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2017/12/">
+  <link rel="canonical" href="http://yoursite.com/2018/03/16/js静态变量/">
 
 
 
 
 
-  <title>归档 | Strawberry 💕</title>
+  <title>js静态变量以及静态方法(内含ts小笔记) | Strawberry 💕</title>
   
 
 
@@ -172,7 +174,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <a href="https://github.com/caomeibuaichibaicai" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
@@ -300,72 +302,221 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 9 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/16/js静态变量/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Strawberry">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/strawberry.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Strawberry 💕">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/12/28/es6-proto/" itemprop="url">
-              
-                <span itemprop="name">es6_proto新方法</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">js静态变量以及静态方法(内含ts小笔记)</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2017-12-28T15:44:52+08:00" content="2017-12-28">
-          12-28
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-16T15:04:55+08:00">
+                2018-03-16
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Js基础/" itemprop="url" rel="index">
+                    <span itemprop="name">Js基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span id="busuanzi_value_page_pv"></span>次阅读
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <h3 id="1-js中的静态方法是无法被实例对象所调用的"><a href="#1-js中的静态方法是无法被实例对象所调用的" class="headerlink" title="1.js中的静态方法是无法被实例对象所调用的"></a>1.js中的静态方法是无法被实例对象所调用的</h3><p>例子如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> BaseClass = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;; <span class="comment">// var BaseClass=new Function();  </span></span><br><span class="line">BaseClass.f1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="comment">//定义静态方法  </span></span><br><span class="line">      alert(<span class="string">' This is a static method '</span>);  </span><br><span class="line"> &#125;  </span><br><span class="line"> BaseClass.f1();<span class="comment">//This is a static method  </span></span><br><span class="line"> <span class="keyword">var</span> instance1 = <span class="keyword">new</span> BaseClass();  </span><br><span class="line"> instance1.f1();<span class="comment">//instance1.f1 is not a function</span></span><br></pre></td></tr></table></figure></p>
+<p> 这里实例化的对象instance就无法调用原型上面绑定的方法，若想要调用原型上的方法，即创建非静态的实例方法，这里有三种方法：<br> <strong>(1)在原型上面通过prototype来进行实例方法的绑定，如下：</strong><br> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> BaseClass = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;  </span><br><span class="line">BaseClass.prototype.method1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  </span><br><span class="line">      alert(<span class="string">' This is a instance method '</span>);  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="keyword">var</span> instance1 = <span class="keyword">new</span> BaseClass();  </span><br><span class="line">instance1.method1();<span class="comment">//This is a instance method</span></span><br></pre></td></tr></table></figure></p>
+<p> <strong>（2）在实例上直接定义方法，如下：</strong><br> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> BaseClass = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;  </span><br><span class="line"><span class="keyword">var</span> instance1 = <span class="keyword">new</span> BaseClass();  </span><br><span class="line">instance1.method1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  </span><br><span class="line">     alert(<span class="string">' This is a instance method too '</span>);  </span><br><span class="line"> &#125;   </span><br><span class="line">instance1.method1();<span class="comment">//This is a instance method too</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>（3）在构造函数内部，通过this定义实例方法，如下：</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> BaseClass = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </span><br><span class="line">  <span class="keyword">this</span>.method1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  </span><br><span class="line">    alert(<span class="string">' Defined by the "this" instance method'</span>);  </span><br><span class="line">  &#125;  </span><br><span class="line"> &#125;;  </span><br><span class="line"><span class="keyword">var</span> instance1 = <span class="keyword">new</span> BaseClass();  </span><br><span class="line">instance1.method1();<span class="comment">//Defined by the "this" instance method</span></span><br></pre></td></tr></table></figure></p>
+<p>这三种定义实例方法的方法，若定义三个相同名字的实例方法，三种方法的优先级从大到小依次是：<strong>实例直接定义&gt;内部this定义&gt;原型prototype绑定定义</strong>，即实例上直接定义的实例方法会覆盖掉其他两种同时定义的实例方法，并且这三种创建的实例方法必须通过类的实例来进行访问。<br>在类（即构造函数）里面若使用var进行声明变量或者声明方法时，声明的都是局部的，局部变量或者方法是无法通过声明类的实例来进行访问的，其作用域只在内部可见。</p>
+<h3 id="2-js中明确来说没有真正意义上的静态变量"><a href="#2-js中明确来说没有真正意义上的静态变量" class="headerlink" title="2.js中明确来说没有真正意义上的静态变量"></a>2.js中明确来说没有真正意义上的静态变量</h3><p>类对象上的prototype可以作为实例对象共同拥有的“静态变量”而存在，实例对象都可以访问到该变量，并且一个实例对象改变了该变量的值，其他实例对象访问到的“静态变量”都是改变后的值（真正意义上的静态变量具有此特性），但是呢，这个“静态变量”呢，类对象是直接访问不到的，而要通过类对象.prototype.变量名，这种方法来访问这个变量，所以本质上这个“静态变量”还是个实例变量。</p>
+<h3 id="3-typescript推荐使用"><a href="#3-typescript推荐使用" class="headerlink" title="3.typescript推荐使用"></a>3.typescript推荐使用</h3><p>typescript是一种js的超集，可以完美解决js中没有静态变量的问题，并且支持所有的js语法，学习typescript简直就是大势所趋。<br><strong>ts个人学习初期基础笔记：</strong><br>1.在文件中创建.ts文件，写一些ts语法。<br>2.在命令行使用 tsc -init，创建出自动编译js文件的配置文件tsconfig.json，之后使用 tsc -w 生成自动编译并且监视原ts文件的js文件，启用并排视图模式，即可自动编译为js文件。<br>3.tsconfig.json中可以配置生成监听对应的js文件位置，launch.json中修改program的值为要打断点调试的编译后的js文件。</p>
+
+      
     </div>
+    
+    
+    
+    <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>给颗🍬吃嘛 ❤~~~~~</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/WechatIMG105.jpeg" alt="Strawberry 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/静态变量/" rel="tag"><i class="fa fa-tag"></i> 静态变量</a>
+          
+            <a href="/tags/原型上实例方法/" rel="tag"><i class="fa fa-tag"></i> 原型上实例方法</a>
+          
+            <a href="/tags/typescript/" rel="tag"><i class="fa fa-tag"></i> typescript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/02/es6-解构/" rel="next" title="es6_解构赋值">
+                <i class="fa fa-chevron-left"></i> es6_解构赋值
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/16/vuex笔记/" rel="prev" title="vuex笔记">
+                vuex笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -373,6 +524,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MzE2My8xOTcwOQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -393,8 +553,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -485,6 +654,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-js中的静态方法是无法被实例对象所调用的"><span class="nav-number">1.</span> <span class="nav-text">1.js中的静态方法是无法被实例对象所调用的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-js中明确来说没有真正意义上的静态变量"><span class="nav-number">2.</span> <span class="nav-text">2.js中明确来说没有真正意义上的静态变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-typescript推荐使用"><span class="nav-number">3.</span> <span class="nav-text">3.typescript推荐使用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -630,6 +815,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -658,6 +847,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

@@ -75,6 +75,36 @@
   </entry>
   
   <entry>
+    <title>js静态变量以及静态方法(内含ts小笔记)</title>
+    <link href="http://yoursite.com/2018/03/16/js%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F/"/>
+    <id>http://yoursite.com/2018/03/16/js静态变量/</id>
+    <published>2018-03-16T07:04:55.000Z</published>
+    <updated>2019-04-16T11:21:51.537Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-js中的静态方法是无法被实例对象所调用的&quot;&gt;&lt;a href=&quot;#1-js中的静态方法是无法被实例对象所调用的&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Js基础" scheme="http://yoursite.com/categories/Js%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="静态变量" scheme="http://yoursite.com/tags/%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F/"/>
+    
+      <category term="原型上实例方法" scheme="http://yoursite.com/tags/%E5%8E%9F%E5%9E%8B%E4%B8%8A%E5%AE%9E%E4%BE%8B%E6%96%B9%E6%B3%95/"/>
+    
+      <category term="typescript" scheme="http://yoursite.com/tags/typescript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>es6_解构赋值</title>
     <link href="http://yoursite.com/2018/01/02/es6-%E8%A7%A3%E6%9E%84/"/>
     <id>http://yoursite.com/2018/01/02/es6-解构/</id>
