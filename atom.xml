@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-16T08:26:36.889Z</updated>
+  <updated>2019-04-16T08:31:29.446Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>es6_proto新方法</title>
-    <link href="http://yoursite.com/2018/01/16/es6-proto/"/>
-    <id>http://yoursite.com/2018/01/16/es6-proto/</id>
-    <published>2018-01-16T07:44:52.000Z</published>
-    <updated>2019-04-16T08:26:36.889Z</updated>
+    <link href="http://yoursite.com/2017/12/28/es6-proto/"/>
+    <id>http://yoursite.com/2017/12/28/es6-proto/</id>
+    <published>2017-12-28T07:44:52.000Z</published>
+    <updated>2019-04-16T08:31:29.446Z</updated>
     
     <summary type="html">
     
@@ -35,7 +35,7 @@
     
     </summary>
     
-      <category term="Js基础" scheme="http://yoursite.com/categories/Js%E5%9F%BA%E7%A1%80/"/>
+      <category term="es6" scheme="http://yoursite.com/categories/es6/"/>
     
     
       <category term="es6_proto" scheme="http://yoursite.com/tags/es6-proto/"/>
