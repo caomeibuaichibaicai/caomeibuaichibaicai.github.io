@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-16T08:31:29.446Z</updated>
+  <updated>2019-04-16T08:42:30.433Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>es6_解构赋值</title>
+    <link href="http://yoursite.com/2018/01/02/es6-%E8%A7%A3%E6%9E%84/"/>
+    <id>http://yoursite.com/2018/01/02/es6-解构/</id>
+    <published>2018-01-02T03:29:12.000Z</published>
+    <updated>2019-04-16T08:42:30.433Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;1.解构赋值要求等号右边必须是一个对象，若为null或者undefined就会报错&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2.解构赋值必须是最后一个参数，不然报错，例如：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figu
+        
+      
+    
+    </summary>
+    
+      <category term="es6" scheme="http://yoursite.com/categories/es6/"/>
+    
+    
+      <category term="es6" scheme="http://yoursite.com/tags/es6/"/>
+    
+      <category term="解构赋值" scheme="http://yoursite.com/tags/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/"/>
+    
+      <category term="扩展运算符" scheme="http://yoursite.com/tags/%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>es6_proto新方法</title>
