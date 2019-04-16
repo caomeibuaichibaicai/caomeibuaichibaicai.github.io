@@ -95,7 +95,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="高阶函数,柯里化,es6箭头函数,">
 
 
 
@@ -108,16 +108,18 @@
 
 
 
-<meta name="description" content="so say Geronimo !">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Strawberry 💕">
-<meta property="og:url" content="http://yoursite.com/categories/trytry/index.html">
+<meta name="description" content="1.相关定义高阶函数： 将函数作为参数或者返回值是函数的函数。*柯里化是高阶函数的一种表现！* 2.普通函数的柯里化，也是高阶函数1234567891011121314//柯里化前：function add(a, b) &amp;#123;    return a + b; &amp;#125;       // 执行 add 函数，一次传入两个参数即可 add(10, 2)    // 12 //柯里化后： f">
+<meta name="keywords" content="高阶函数,柯里化,es6箭头函数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js柯里化函数">
+<meta property="og:url" content="http://yoursite.com/2018/05/16/js柯里化/index.html">
 <meta property="og:site_name" content="Strawberry 💕">
-<meta property="og:description" content="so say Geronimo !">
+<meta property="og:description" content="1.相关定义高阶函数： 将函数作为参数或者返回值是函数的函数。*柯里化是高阶函数的一种表现！* 2.普通函数的柯里化，也是高阶函数1234567891011121314//柯里化前：function add(a, b) &amp;#123;    return a + b; &amp;#125;       // 执行 add 函数，一次传入两个参数即可 add(10, 2)    // 12 //柯里化后： f">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-16T10:37:31.328Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Strawberry 💕">
-<meta name="twitter:description" content="so say Geronimo !">
+<meta name="twitter:title" content="js柯里化函数">
+<meta name="twitter:description" content="1.相关定义高阶函数： 将函数作为参数或者返回值是函数的函数。*柯里化是高阶函数的一种表现！* 2.普通函数的柯里化，也是高阶函数1234567891011121314//柯里化前：function add(a, b) &amp;#123;    return a + b; &amp;#125;       // 执行 add 函数，一次传入两个参数即可 add(10, 2)    // 12 //柯里化后： f">
 
 
 
@@ -147,13 +149,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/trytry/">
+  <link rel="canonical" href="http://yoursite.com/2018/05/16/js柯里化/">
 
 
 
 
 
-  <title>分类: trytry | Strawberry 💕</title>
+  <title>js柯里化函数 | Strawberry 💕</title>
   
 
 
@@ -172,7 +174,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <a href="https://github.com/caomeibuaichibaicai" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
@@ -300,53 +302,231 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>trytry<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/16/js柯里化/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Strawberry">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/strawberry.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Strawberry 💕">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/01/12/firstArtical/" itemprop="url">
-              
-                <span itemprop="name">firstArtical</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">js柯里化函数</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2017-01-12T16:01:07+08:00" content="2017-01-12">
-          01-12
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-16T14:54:48+08:00">
+                2018-05-16
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Js基础/" itemprop="url" rel="index">
+                    <span itemprop="name">Js基础</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Js基础/es6/" itemprop="url" rel="index">
+                    <span itemprop="name">es6</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span id="busuanzi_value_page_pv"></span>次阅读
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1-相关定义"><a href="#1-相关定义" class="headerlink" title="1.相关定义"></a>1.相关定义</h2><p><strong>高阶函数：</strong> 将函数作为参数或者返回值是函数的函数。<br><strong>*柯里化</strong>是高阶函数的一种表现！*</p>
+<h2 id="2-普通函数的柯里化，也是高阶函数"><a href="#2-普通函数的柯里化，也是高阶函数" class="headerlink" title="2.普通函数的柯里化，也是高阶函数"></a>2.普通函数的柯里化，也是高阶函数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//柯里化前：</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line"> &#125;       <span class="comment">// 执行 add 函数，一次传入两个参数即可</span></span><br><span class="line"> add(<span class="number">10</span>, <span class="number">2</span>)    <span class="comment">// 12</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">//柯里化后：</span></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">a</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">b</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a + b</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> add3 = add(<span class="number">3</span>)</span><br><span class="line">add3(<span class="number">4</span>) === <span class="number">3</span> + <span class="number">4</span> <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-es6的箭头函数柯里化写法"><a href="#2-es6的箭头函数柯里化写法" class="headerlink" title="2.es6的箭头函数柯里化写法"></a>2.es6的箭头函数柯里化写法</h2><p>如下：</p>
+<blockquote>
+<p>let add = a =&gt; b =&gt; a + b</p>
+</blockquote>
+<p>n个箭头就是进行了n-1次柯里化，前n-1个箭头都是在传递参数，只有最后一次的箭头函数的调用才会有返回值，所以整个函数逻辑以及参数的真正调用都在最后一次箭头函数的调用中。也就是说如果有 n 个箭头，那么我们在 n-1 次调用之前，都只是在向表达式里传参，而伴随着第 n 次调用，就会直接返回结果。</p>
+<p>例子里的多个连续箭头（无论俩个箭头函数三个及以上）函数连在一起 就是在柯里化。<strong>这种连续箭头函数就是多次柯里化函数的 es6 写法。</strong></p>
+<p><strong>柯里化就是把接受多个参数的函数变换成接受一个单一参数的函数，并且返回（接受余下的参数而且返回结果的）新函数的技术</strong>。柯里化后，将第一个参数变量存在函数里面了(闭包)。<br><a href="https://zhuanlan.zhihu.com/p/33374547" target="_blank" rel="noopener">参考链接在这里</a></p>
+<h2 id="3-柯里函数的好处"><a href="#3-柯里函数的好处" class="headerlink" title="3.柯里函数的好处"></a>3.柯里函数的好处</h2><p>1.可以惰性求值（延迟计算）<br>2.可以提前传递部分参数（提前返回）<br>3.参数复用（减少一些重复性的传参）</p>
 
       
     </div>
+    
+    
+    
+    <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>给颗🍬吃嘛 ❤~~~~~</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/WechatIMG105.jpeg" alt="Strawberry 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/高阶函数/" rel="tag"><i class="fa fa-tag"></i> 高阶函数</a>
+          
+            <a href="/tags/柯里化/" rel="tag"><i class="fa fa-tag"></i> 柯里化</a>
+          
+            <a href="/tags/es6箭头函数/" rel="tag"><i class="fa fa-tag"></i> es6箭头函数</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/02/es6-解构/" rel="next" title="es6_解构赋值">
+                <i class="fa fa-chevron-left"></i> es6_解构赋值
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -354,6 +534,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MzE2My8xOTcwOQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -374,8 +563,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -466,6 +664,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-相关定义"><span class="nav-number">1.</span> <span class="nav-text">1.相关定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-普通函数的柯里化，也是高阶函数"><span class="nav-number">2.</span> <span class="nav-text">2.普通函数的柯里化，也是高阶函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-es6的箭头函数柯里化写法"><span class="nav-number">3.</span> <span class="nav-text">2.es6的箭头函数柯里化写法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-柯里函数的好处"><span class="nav-number">4.</span> <span class="nav-text">3.柯里函数的好处</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -611,6 +825,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -639,6 +857,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-16T08:42:30.433Z</updated>
+  <updated>2019-04-16T10:37:31.328Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>js柯里化函数</title>
+    <link href="http://yoursite.com/2018/05/16/js%E6%9F%AF%E9%87%8C%E5%8C%96/"/>
+    <id>http://yoursite.com/2018/05/16/js柯里化/</id>
+    <published>2018-05-16T06:54:48.000Z</published>
+    <updated>2019-04-16T10:37:31.328Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-相关定义&quot;&gt;&lt;a href=&quot;#1-相关定义&quot; class=&quot;headerlink&quot; title=&quot;1.相关定义&quot;&gt;&lt;/a&gt;1.相关定义&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;高阶函数：&lt;/strong&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="Js基础" scheme="http://yoursite.com/categories/Js%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="es6" scheme="http://yoursite.com/categories/Js%E5%9F%BA%E7%A1%80/es6/"/>
+    
+    
+      <category term="高阶函数" scheme="http://yoursite.com/tags/%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0/"/>
+    
+      <category term="柯里化" scheme="http://yoursite.com/tags/%E6%9F%AF%E9%87%8C%E5%8C%96/"/>
+    
+      <category term="es6箭头函数" scheme="http://yoursite.com/tags/es6%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>es6_解构赋值</title>
