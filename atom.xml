@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-15T10:35:45.910Z</updated>
+  <updated>2019-04-16T07:58:08.660Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>es6_proto</title>
+    <link href="http://yoursite.com/2019/04/16/es6-proto/"/>
+    <id>http://yoursite.com/2019/04/16/es6-proto/</id>
+    <published>2019-04-16T07:44:52.000Z</published>
+    <updated>2019-04-16T07:58:08.660Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-Object-setPrototypeOf&quot;&gt;&lt;a href=&quot;#1-Object-setPrototypeOf&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Js基础" scheme="http://yoursite.com/categories/Js%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="es6_proto" scheme="http://yoursite.com/tags/es6-proto/"/>
+    
+      <category term="原型新方法" scheme="http://yoursite.com/tags/%E5%8E%9F%E5%9E%8B%E6%96%B0%E6%96%B9%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>Js浮点数</title>
