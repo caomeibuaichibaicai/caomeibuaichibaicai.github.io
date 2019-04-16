@@ -118,4 +118,30 @@
     
   </entry>
   
+  <entry>
+    <title>error语法</title>
+    <link href="http://yoursite.com/2017/04/11/err-catch/"/>
+    <id>http://yoursite.com/2017/04/11/err-catch/</id>
+    <published>2017-04-11T02:13:15.000Z</published>
+    <updated>2019-04-16T08:17:41.546Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;###1.try-catch语法解释用法&lt;br&gt;try是定义用来测试代码块出现错误的语句，&lt;strong&gt;必须和catch或者finally连用，也可以三个都一起用&lt;/strong&gt;。&lt;br&gt;catch只有当发生错误时才会执行，finally无论有无异常都会执行。&lt;br&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="Js基础" scheme="http://yoursite.com/categories/Js%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="错误处理语法" scheme="http://yoursite.com/tags/%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E8%AF%AD%E6%B3%95/"/>
+    
+  </entry>
+  
 </feed>
