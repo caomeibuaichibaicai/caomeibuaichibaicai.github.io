@@ -1,6 +1,6 @@
 ---
 title: Js浮点数
-date: 2019-03-26 11:23:04
+date: 2017-03-26 11:23:04
 categories: Js基础
 tags: 浮点数
 ---
